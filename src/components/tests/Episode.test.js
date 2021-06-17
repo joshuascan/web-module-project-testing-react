@@ -41,7 +41,7 @@ test("renders default image when image is not defined", () => {
   render(<Episode episode={testEpisodeWithoutImage} />);
 
   const image = screen.queryByAltText("./stranger_things.png");
-
+  expect(image).toBeInTheDocument();
   expect(image).toHaveAttribute("alt", "./stranger_things.png");
 });
 
